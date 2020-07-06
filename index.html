@@ -12,6 +12,8 @@
 <body>
    <header>
       <div class="wrapper clearfix">
+         <i class="fas fa-bars"></i>
+
          <nav>
             <ul class="clearfix">
                <li><a href="#">Home</a></li>
@@ -19,12 +21,10 @@
                <li><a href="#">Blog</a></li>
                <li><a href="#">Contact</a></li>
             </ul>
-         </nav>
-
-         <ul class="social-media-icons">
-            <li>
-               <a href="#" aria-label="Visit our Instagram page">
-                  <i class="fab fa-instagram" aria-hidden="true" title="Visit our Instagram page"></i>
+            <ul class="social-media-icons">
+               <li>
+                  <a href="#" aria-label="Visit our Instagram page">
+                     <i class="fab fa-instagram" aria-hidden="true" title="Visit our Instagram page"></i>
                </a>
             </li>
             <li>
@@ -43,43 +43,44 @@
                </a>
             </li>
          </ul>
-
+      </nav>
+         
          <h1>Hangry tummy</h1>
       </div> <!--wrapper ends here-->
    </header>
    <main>
       <section class="main-articles clearfix">
          <div class="new-to-menu clearfix">
+            <div class="new-to-menu-image">
+               <img src="./assets/right-photo.jpg" alt="Close up of a delicious burger topped with egg, mushroom, lettuce and tomato between two grill toasted bun and a side of fries.">
+            </div>
             <div class="new-to-menu-text wrapper">
                <h2>New to our menu</h2>
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa aspernatur quibusdam nihil accusamus sunt aliquam reprehenderit natus accusantium nam voluptate!</p>
                <a href="#" class="read-more-button">Read more</a>
             </div><!--wrapper ends here, part of text-container div-->
-            <div class="new-to-menu-image">
-               <img src="./assets/right-photo.jpg" alt="Close up of a delicious burger topped with egg, mushroom, lettuce and tomato between two grill toasted bun and a side of fries.">
-            </div>
          </div>
 
          <div class="full-experience clearfix">
+            <div class="full-experience-image">
+               <img src="./assets/left-photo.jpg" alt="Top down view of a table with plates serving fries, mashed potatos and gravy, and a meal of baked beans, poached eggs, home fries, and topped with arugula.">
+            </div>
             <div class="full-experience-text wrapper">
                <h2>Full experience</h2>
                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, illum? Perferendis quasi id suscipit nisi corrupti sunt blanditiis cum eveniet nihil eos, quaerat error ullam animi aut architecto explicabo ipsam?</p>
                <a href="#" class="read-more-button">Read more</a>
             </div><!--wrapper ends here, part of text-container div-->
-            <div class="full-experience-image">
-               <img src="./assets/left-photo.jpg" alt="Top down view of a table with plates serving fries, mashed potatos and gravy, and a meal of baked beans, poached eggs, home fries, and topped with arugula.">
-            </div>
          </div>
       </section>
       <section class="desserts clearfix">
          <div class="wrapper clearfix">
+            <div class="desserts-img-container">
+               <img src="./assets/square-imege.jpg" alt="Top down view of a row of four open ice cream jaws: green tea, coffee, strawberry, and chocolate peanut.">
+            </div>
             <div class="desserts-text-container">
                <h2>Desserts</h2>
                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio cum recusandae maiores alias totam consequuntur quis suscipit soluta at sit voluptatum magni atque, eum delectus vitae libero reprehenderit debitis numquam ea voluptas ab, accusamus dignissimos tempora officia? Explicabo quia ipsam, tempore nobis quasi eos vitae! Voluptatem possimus, tempore fuga praesentium ducimus maxime veniam dignissimos distinctio, atque aliquid voluptas.</p>
                <a href="#" class="read-more-button">Read more</a>
-            </div>
-            <div class="desserts-img-container">
-               <img src="./assets/square-imege.jpg" alt="Top down view of a row of four open ice cream jaws: green tea, coffee, strawberry, and chocolate peanut.">
             </div>
          </div><!--wrapper ends here-->
       </section>
@@ -146,5 +147,15 @@
          </div>
       </div><!--wrapper ends here-->
    </footer>
+
+   <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+   <script>
+      $(function() {
+         $(".fa-bars").on("click", function(){
+            $("nav").toggleClass("nav-slide-in");
+         })
+
+      });
+   </script>
 </body>
 </html>

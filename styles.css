@@ -49,6 +49,7 @@ h1 {
    line-height: 120px;
    font-weight: 400;
    text-transform: capitalize;
+   text-align: right;
 }
 
 h2 {
@@ -98,6 +99,11 @@ input[type="submit"]:focus {
 /* ==================================
 HEADER STYLES
 ================================== */
+/* used for mobile nav, styles in @media query 720px */
+.fa-bars {
+   display: none;
+}
+
 header {
    height: 100vh;
    background: bottom left -50px no-repeat url(./assets/header-burger.png);
@@ -162,10 +168,10 @@ MAIN SECTION STYLES (NEW TO MENU & FULL EXPERIENCE)
 /* NEW TO MENU */
 .new-to-menu-text,
 .new-to-menu-image {
-   float: left;
+   float: right;
 }
 
-* {border: 1px red solid;}
+/* * {border: 1px red solid;} */
 
 .new-to-menu-text {
    padding-left: 2.5%;
@@ -176,7 +182,7 @@ MAIN SECTION STYLES (NEW TO MENU & FULL EXPERIENCE)
 /* FULL EXPERIENCE */
 .full-experience-text, 
 .full-experience-image {
-   float: right;
+   float: left;
 }
 
 .full-experience-text {
@@ -331,8 +337,8 @@ MEDIA QUERIES (WELCOME TO HELL)
 @media (max-width: 1090px) {
    .social-media-icons {
       position: relative;
-      right: none;
-      top: none;
+      right: auto;
+      top: auto;
       text-align: center;
    }
 
@@ -353,9 +359,12 @@ MEDIA QUERIES (WELCOME TO HELL)
 
 /* MAJOR: font-size adjustment for main-articles and desserts div, subscribe form input placement */
 @media (max-width: 1018px) {
-   h1 {
+   header {
+      background-size: 60%;
+   }
+
+   header h1 {
       font-size: 12rem;
-      margin-right: 0;
    }
 
    .new-to-menu-text h2, 
@@ -406,18 +415,164 @@ MEDIA QUERIES (WELCOME TO HELL)
 
 /* MINOR: h1 font-size + contact block width adjustment  */
 @media (max-width: 932px) {
-   header h1 {
-      font-size: 10rem;
-      width: 50%;
-      transition: all .3s;
-   }
-
    .contact-info {
       width: 40%;
    }
 }
 
-/* MAJOR: switch to mobile design */
+/* MAJOR: half switch to mobile design */
 @media (max-width: 850px) {
    
+   /* HEADER + NAV */
+   /* header {
+      background-size: 65%;
+   } */
+   
+   header h1{
+      font-size: 10rem;
+      line-height: 100px;
+      width: 60%;
+      margin-right: 0;
+   }
+
+   /* MAIN ARTICLES */
+   .new-to-menu-text,
+   .new-to-menu-image,
+   .full-experience-text,
+   .full-experience-image {
+      float: none;
+      width: 90%;
+      margin: 0 auto;
+   }
+
+   .new-to-menu-text,
+   .full-experience-text {
+      padding: 40px 50px;
+      text-align: center;
+   }
+
+   /* DESSERTS */
+   .desserts {
+      padding: 50px 0;
+   }
+
+   .desserts-text-container,
+   .desserts-img-container {
+      float: none;
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+   }
+
+   .desserts-text-container h2{
+      margin-top: 30px;
+   }
+
+   /* CONTACT NAV */
+   .contact-nav li {
+      width: 30%;
+      margin: 5px 10px;
+   }
+
+   /* INSTAGRAM FEED */
+   .instagram-feed li {
+      margin: 30px 10px;
+      width: calc((100% / 3) - 22px);
+   }
+
+   /* CONTACT FORM */
+   .contact-info h2 {
+      padding-left: 0;
+      text-align: center;
+   }
+}
+
+/* MINOR: stack contact info and subscribe form on top of each other */
+@media (max-width: 755px) {
+   /* HEADER */
+
+   /* FOOTER FORMS */
+   .contact-info,
+   .subscribe-form {
+      float: none;
+      width: 100%;
+      text-align: center;
+   }
+
+   .subscribe-form {
+      margin-top: 50px;
+   }
+}
+
+/* MAJOR: full switch to mobile design including hamburger nav */
+@media (max-width: 720px) {
+   /* MOBILE NAV STYLES */
+   .fa-bars {
+      display: inline-block;
+      position: fixed;
+      right: 20px;
+      top: 10px;
+      z-index: 100;
+      color: #1f2022;
+      font-size: 6rem;
+      padding: 10px;
+      cursor: pointer;
+   }
+
+   nav {
+      background: #f3f3f3;
+      width: 45%;
+      position: fixed;
+      right: -100%;
+      transition: all .8s ease-in;
+   }
+
+   .nav-slide-in {
+      right: 0;
+      transition: all .6s ease-out;
+   }
+
+   nav li {
+      display: block;
+   }
+
+   .social-media-icons li {
+      margin: 0 10px;
+   }
+
+   .social-media-icons a {
+      padding: 10px;
+   }
+
+   /* HEADER */
+   header {
+      background-position: bottom left -30px;
+      background-size: 420px;
+   }
+
+   header h1 {
+      font-size: 8.2rem;
+      line-height: inherit;
+      font-weight: 700;
+   }
+
+   /* CONTACT-NAV */ 
+   .contact-nav {
+      padding: 50px 0;
+   }
+
+   .contact-nav li {
+      display: block;
+      margin: 30px auto;
+      width: 100%;
+   }
+
+   /* INSTAGRAM */ 
+   .instagram-feed ul li {
+      width: calc(50% - 22px);
+   }
+
+   .instagram-feed ul li:last-child {
+      display: none;
+   }
 }
