@@ -133,7 +133,7 @@ h1 {
    float: right;
    width: 55%;
    margin-top: 12%;
-   margin-right: 2.5%;
+   margin-right: 5%;
 }
 
 .social-media-icons {
@@ -143,9 +143,14 @@ h1 {
    text-align: center;
 }
 
+.social-media-icons li {
+   display: block;
+}
+
 .social-media-icons i {
    color: #e75605;
-   margin-bottom: 20px;
+   margin-bottom: 10px;
+   float: right;
 }
 /* ============================= */
 
@@ -517,6 +522,7 @@ MEDIA QUERIES (WELCOME TO HELL)
       font-size: 6rem;
       padding: 10px;
       cursor: pointer;
+      transition: all .3s ease-in;
    }
 
    nav {
@@ -574,5 +580,55 @@ MEDIA QUERIES (WELCOME TO HELL)
 
    .instagram-feed ul li:last-child {
       display: none;
+   }
+}
+
+/* MINOR: Hamburger nav size and position adjustment */
+@media (max-width: 650px) {
+   nav {
+      width: 160px;
+   }
+
+   nav ul:first-child {
+      padding-top: 75px;
+   }
+
+   .bars-slide {
+      right: 43px;
+      top: 5px;
+      transition: .6s all ease-in;
+   }
+}
+
+/* MINOR: header font size adjustment & main article/ desserts final mobile size */
+@media (max-width: 590px) {
+   /* HEADER */
+   header {
+      background-size: 400px;
+      background-position: bottom -130px;
+   }
+
+   header h1 {
+      margin-top: 22%;
+      font-size: 7.2rem;
+      width: 100%;
+   }
+
+   .fa-bars {
+      font-size: 5rem;
+   }
+
+   /* MAIN ARTICLES & DESSERTS */
+   .new-to-menu-image,
+   .full-experience-image,
+   .desserts-img-container,
+   .desserts-text-container {
+      width: 100%;
+   }
+
+   .new-to-menu-text,
+   .full-experience-text {
+      width: 100%;
+      padding: 25px 
    }
 }
