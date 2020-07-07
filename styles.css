@@ -8,9 +8,9 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* ==============================
+/* ===========================================
 STRIPPING & GENERAL STYLES
-============================== */
+=========================================== */
 /* 
    font-family: 'Catamaran', sans-serif;
    font-family: 'Montserrat', sans-serif; */
@@ -32,6 +32,12 @@ img {
 .wrapper {
    max-width: 1080px;
    width: 95%;
+   margin: 0 auto;
+}
+
+.wrapper-edge {
+   max-width: 1300px;
+   width: 100%;
    margin: 0 auto;
 }
 
@@ -94,11 +100,11 @@ input[type="submit"]:focus {
    background: #e75605;
    color: white;
 }
-/* =============================== */
+/* ======================================== */
 
-/* ==================================
+/* ===========================================
 HEADER STYLES
-================================== */
+=========================================== */
 /* used for mobile nav, styles in @media query 720px */
 .fa-bars {
    display: none;
@@ -106,8 +112,13 @@ HEADER STYLES
 
 header {
    height: 100vh;
+   max-height: 900px;
    background: bottom left -50px no-repeat url(./assets/header-burger.png);
-   background-size: contain;
+   background-size: 600px;
+   position: relative;
+}
+
+nav {
    position: relative;
 }
 
@@ -138,8 +149,8 @@ h1 {
 
 .social-media-icons {
    position: absolute;
-   right: 25px;
-   top: 35%;
+   right: -40px;
+   top: 400%;
    text-align: center;
 }
 
@@ -152,22 +163,32 @@ h1 {
    margin-bottom: 10px;
    float: right;
 }
-/* ============================= */
 
-/* ================================ 
+.social-media-icons i:hover,
+.social-media-icons i:focus {
+   color: #1f2022;
+   transition: all .2s;
+}
+/* ======================================== */
+
+/* ========================================== 
 MAIN SECTION STYLES (NEW TO MENU & FULL EXPERIENCE)
-================================ */
+=========================================== */
 /* GENERAL */
 .new-to-menu-text, 
 .new-to-menu-image,
 .full-experience-text,
 .full-experience-image {
    width: 50%;
-   height: 100%;
 }
 
 .main-articles p {
    margin: 20px 0;
+}
+
+.new-to-menu-text,
+.full-experience-text {
+   padding-top: 60px;
 }
 
 /* NEW TO MENU */
@@ -176,12 +197,13 @@ MAIN SECTION STYLES (NEW TO MENU & FULL EXPERIENCE)
    float: right;
 }
 
-/* * {border: 1px red solid;} */
-
 .new-to-menu-text {
    padding-left: 2.5%;
-   padding-top: 60px;
    padding-right: 50px;
+}
+
+.new-to-menu-image {
+   max-width: 632px;
 }
 
 /* FULL EXPERIENCE */
@@ -192,14 +214,17 @@ MAIN SECTION STYLES (NEW TO MENU & FULL EXPERIENCE)
 
 .full-experience-text {
    padding-left: 50px;
-   padding-top: 60px;
    padding-right: 2.5%;
 }
-/* ================================ */
 
-/* ===================================
+.full-experience-image {
+   max-width: 632px;
+}
+/* ======================================== */
+
+/* ===========================================
 DESSERTS SECTION STYLING
-=================================== */
+=========================================== */
 .desserts {
    background: #f3f3f3;
    padding: 100px 0;
@@ -218,10 +243,11 @@ DESSERTS SECTION STYLING
    width: 32%;
    float: left;
 }
+/* ======================================== */
 
-/* ================================
+/* ===========================================
 CONTACT NAVIGATION
-================================ */
+=========================================== */
 .contact-nav {
    background: #e75605;
    padding: 150px 0; 
@@ -244,6 +270,12 @@ CONTACT NAVIGATION
    color: white;
 }
 
+.contact-nav a:hover i,
+.contact-nav a:focus-within i {
+   color: #1f2022;
+   transition: all .2s;
+}
+
 .contact-nav i {
    font-size: 5rem;
 }
@@ -251,11 +283,11 @@ CONTACT NAVIGATION
 .contact-nav a {
    padding: 20px;
 }
-/* ====================================== */
+/* ======================================== */
 
-/* =========================================
+/* ===========================================
 INSTAGRAM GALLERY STYLES
-========================================= */
+=========================================== */
 .instagram-feed {
    padding: 50px 0;
 }
@@ -274,11 +306,11 @@ INSTAGRAM GALLERY STYLES
    margin: 30px 20px;
    width: calc((100% / 3) - 42px);
 }
-/* ====================================== */
+/* ======================================== */
 
-/* ========================================= 
+/* ========================================== 
 FOOTER STYLES
-========================================= */
+=========================================== */
 footer {
    background: #f3f3f3;
    padding: 50px 0 100px 0;
@@ -320,21 +352,21 @@ input[type="email"]:focus {
 input[type="submit"] {
    width: 28%;
 }
-/* ======================================= */
+/* ======================================== */
 
-/* ==========================================
-MEDIA QUERIES (WELCOME TO HELL)
-========================================== */
+/* ===========================================
+MEDIA QUERIES
+=========================================== */
 /* MINOR: header h1 and background img adjustment */
 @media (max-width: 1160px) {
    header {
       background-position: bottom left -150px;
-      transition: all .3s; 
+      transition: all .2s; 
    }
 
    .social-media-icons {
-      right: 5px;
-      transition: all .3s;
+      right: -30px;
+      transition: all .2s;
    }
 }
 
@@ -358,7 +390,6 @@ MEDIA QUERIES (WELCOME TO HELL)
 
    .contact-nav li {
       width: 25%;
-      transition: all .3s;
    }
 }
 
@@ -376,7 +407,7 @@ MEDIA QUERIES (WELCOME TO HELL)
    .full-experience h2,
    .desserts h2 {
       font-size: 3.2rem;
-      transition: all .3s;
+      transition: all .2s;
    }
 
    .new-to-menu-text p,
@@ -386,19 +417,16 @@ MEDIA QUERIES (WELCOME TO HELL)
    .desserts p,
    .desserts .read-more-button {
       font-size: 1.5rem;
-      transition: all .3s;
+      transition: all .2s;
    }
 
-   .main-articles p {
-   margin: 15px 0;
-}
-
-   .desserts-text-container p {
+   .main-articles p,
+   .desserts-text-container {
       margin: 15px 0;
    }
 
    .contact-info {
-      width: 35%;
+      width: 40%;
    }
 
    .subscribe-form h2,
@@ -407,32 +435,21 @@ MEDIA QUERIES (WELCOME TO HELL)
       text-align: center;
    }
 
-   input[type="email"] {
-      width: 100%;
-      margin-bottom: 10px;
-      text-align: center;
-   }
-
+   input[type="email"], 
    input[type="submit"] {
       width: 100%;
    }
-}
 
-/* MINOR: h1 font-size + contact block width adjustment  */
-@media (max-width: 932px) {
-   .contact-info {
-      width: 40%;
+   input[type="email"] {
+      margin-bottom: 10px;
+      text-align: center;
    }
 }
 
 /* MAJOR: half switch to mobile design */
 @media (max-width: 850px) {
    
-   /* HEADER + NAV */
-   /* header {
-      background-size: 65%;
-   } */
-   
+   /* HEADER */   
    header h1{
       font-size: 10rem;
       line-height: 100px;
@@ -527,12 +544,14 @@ MEDIA QUERIES (WELCOME TO HELL)
 
    nav {
       background: #f3f3f3;
+      border-radius: 1px;
       width: 45%;
       position: fixed;
       right: -100%;
       transition: all .8s ease-in;
    }
 
+   /* class added to nav using jQuery */
    .nav-slide-in {
       right: 0;
       transition: all .6s ease-out;
@@ -593,6 +612,7 @@ MEDIA QUERIES (WELCOME TO HELL)
       padding-top: 75px;
    }
 
+   /* class added to .fa-bars using jQuery */
    .bars-slide {
       right: 43px;
       top: 5px;
@@ -605,7 +625,7 @@ MEDIA QUERIES (WELCOME TO HELL)
    /* HEADER */
    header {
       background-size: 400px;
-      background-position: bottom -130px;
+      background-position: bottom left -130px;
    }
 
    header h1 {
@@ -619,7 +639,9 @@ MEDIA QUERIES (WELCOME TO HELL)
    }
 
    /* MAIN ARTICLES & DESSERTS */
+   .new-to-menu-text,
    .new-to-menu-image,
+   .full-experience-text,
    .full-experience-image,
    .desserts-img-container,
    .desserts-text-container {
@@ -628,7 +650,6 @@ MEDIA QUERIES (WELCOME TO HELL)
 
    .new-to-menu-text,
    .full-experience-text {
-      width: 100%;
       padding: 25px 
    }
 }
