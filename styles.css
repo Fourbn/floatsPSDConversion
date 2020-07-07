@@ -82,7 +82,7 @@ p {
    font-family: 'Catamaran', sans-serif;
 }
 
-/* READ MORE BUTTON STYLES & HOVER/FOCUS */
+/* BUTTON STYLES & HOVER/FOCUS */
 .read-more-button, input[type="submit"] {
    display: inline-block;
    background: white;
@@ -99,6 +99,11 @@ input[type="submit"]:hover,
 input[type="submit"]:focus {
    background: #e75605;
    color: white;
+}
+
+.read-more-button:focus,
+input[type="submit"]:focus {
+   border: 1px dotted #1f2022;
 }
 /* ======================================== */
 
@@ -118,6 +123,7 @@ header {
    position: relative;
 }
 
+/* navigation bar at top of page */
 nav {
    position: relative;
 }
@@ -147,6 +153,7 @@ h1 {
    margin-right: 5%;
 }
 
+/* social media icons placed off to the right */
 .social-media-icons {
    position: absolute;
    right: -40px;
@@ -180,6 +187,7 @@ MAIN SECTION STYLES (NEW TO MENU & FULL EXPERIENCE)
 .full-experience-text,
 .full-experience-image {
    width: 50%;
+   max-width: 632px;
 }
 
 .main-articles p {
@@ -202,10 +210,6 @@ MAIN SECTION STYLES (NEW TO MENU & FULL EXPERIENCE)
    padding-right: 50px;
 }
 
-.new-to-menu-image {
-   max-width: 632px;
-}
-
 /* FULL EXPERIENCE */
 .full-experience-text, 
 .full-experience-image {
@@ -217,9 +221,6 @@ MAIN SECTION STYLES (NEW TO MENU & FULL EXPERIENCE)
    padding-right: 2.5%;
 }
 
-.full-experience-image {
-   max-width: 632px;
-}
 /* ======================================== */
 
 /* ===========================================
@@ -342,7 +343,7 @@ input[type="email"] {
    padding: 12px 9px;
    margin-top: 10px;
    background: white;
-   border: 2px solid white;
+   border: 2px solid #f3f3f3;
 }
 
 input[type="email"]:focus {
